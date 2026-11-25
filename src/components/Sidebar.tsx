@@ -10,7 +10,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
       }`}
     >
       <div className="flex items-center justify-between border-b border-neutral-800 p-4">
-        <a href="/" className="txt-2xl font-bold no-underline text-white" onClick={onClose}>
+        <a href="/" className="txt-2xl font-heading font-bold no-underline text-white" onClick={onClose}>
           Lewis Milburn
         </a>
         <button className="nav-btn text-white" onClick={onClose}>

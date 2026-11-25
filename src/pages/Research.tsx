@@ -2,7 +2,6 @@ import { PageHeader } from '../components/PageHeader';
 import { Section } from '../components/Section';
 import { SocialCards } from '../components/Socials';
 import { TopBar } from '../components/TopBar';
-import {Table} from "../components/Table";
 
 export function Research({ onMenuClick }: { onMenuClick: () => void }) {
   return (
@@ -13,17 +12,60 @@ export function Research({ onMenuClick }: { onMenuClick: () => void }) {
         <PageHeader title="Research" />
 
         <div className="grid gap-4 pt-4">
-            <Section icon="fa-book-bookmark" title="Papers">
-              <Table rows={[
-                ['Can Large Language Models Support Cyber Security Education in UK Secondary Schools? An Experimental Study - 20th IFIP International Symposium on Human Aspects of Information Security & Assurance (HAISA 2026, Örebro, Sweden)','Presented: July 2026, Published: February 2027'],
-                ['Using Large Language Models to Improve Cybersecurity Education at Secondary and Further Education - University of Plymouth','January 2026']
-              ]}/>
-            </Section>
-            <Section icon="fa-gear" title="Tools">
-              <Table rows={[
-                ['AppScanner - Android application offensive security research tool','March 2026']
-              ]}/>
-            </Section>
+          <Section icon="fa-book-bookmark" title="Papers">
+            <table>
+              <thead>
+                <tr>
+                  <th>Paper</th>
+                  <th>Journal or Repository</th>
+                  <th>Year</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Can Large Language Models Support Cyber Security Education in UK Secondary Schools? An
+                    Experimental Study
+                  </td>
+                  <td>
+                    20th IFIP International Symposium on Human Aspects of Information Security & Assurance (HAISA
+                    2026, Örebro, Sweden)
+                  </td>
+                  <td className="subtle">Presented: July 2026 Published: February 2027</td>
+                  <td>
+                    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                      Link <i className="fa-solid fa-arrow-up-right-from-square" />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Using Large Language Models to Improve Cybersecurity Education at Secondary and Further Education
+                  </td>
+                  <td>University of Plymouth</td>
+                  <td className="subtle">September 2025</td>
+                  <td />
+                </tr>
+              </tbody>
+            </table>
+          </Section>
+
+          <Section icon="fa-gear" title="Tools">
+            <table>
+              <tbody>
+                <tr>
+                  <td>AppScanner - Android application offensive security research tool</td>
+                  <td className="subtle">March 2026</td>
+                  <td>
+                    <a href="https://github.com/lewmilburn/appscanner" target="_blank" rel="noopener noreferrer">
+                      Link <i className="fa-solid fa-arrow-up-right-from-square" />
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </Section>
         </div>
 
         <SocialCards names={['LinkedIn', 'ORCID', 'GitHub']} className="grid-3 mt-8 gap-4" />

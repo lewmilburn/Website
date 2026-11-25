@@ -36,7 +36,7 @@ export function Home({ onMenuClick }: { onMenuClick: () => void }) {
 
           <div className="z-10 col-start-4 row-start-3 col-span-5 row-span-2 flex min-w-0 flex-col justify-center px-4 md:px-12">
             <h1 className="txt-8xl pb-std text-left font-bold text-white">Hey, I'm Lewis.</h1>
-            <p className="txt-7xl text-white">A Penetration Tester at KPMG.</p>
+            <p className="txt-7xl font-heading text-white">A Penetration Tester at KPMG.</p>
           </div>
         </div>
       </section>

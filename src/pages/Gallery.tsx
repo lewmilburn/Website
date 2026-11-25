@@ -35,7 +35,7 @@ export function Gallery({ onMenuClick }: { onMenuClick: () => void }) {
         {!albumId && (
           <>
             <PageHeader title="Gallery" />
-            <div className="pb-8">
+            <div className="pb-4">
               <PhotoCarousel albums={albums} />
             </div>
             <AlbumGrid albums={albums} />

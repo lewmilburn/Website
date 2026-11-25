@@ -54,7 +54,7 @@ export function PhotoCarousel({ albums, count = 5 }: PhotoCarouselProps) {
 
       <div className="absolute inset-x-0 bottom-0 z-10 bg-linear-to-t from-black/80 to-transparent p-4">
         <a href={`/gallery/${album.id}`} className="block text-white no-underline">
-          <p className="txt-3xl font-bold">{album.title}</p>
+          <p className="txt-3xl font-heading font-bold">{album.title}</p>
           <AlbumMeta album={album} className="text-sm text-neutral-200" />
         </a>
       </div>

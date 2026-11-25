@@ -10,7 +10,7 @@ export function PageHeader({ title, subtitle, children }: PageHeaderProps) {
   return (
     <header className="pb-8 text-center">
       <h1 className="txt-7xl pb-2 font-bold">{title}</h1>
-      {subtitle && <p className="txt-3xl text-neutral-400">{subtitle}</p>}
+      {subtitle && <p className="txt-3xl font-heading text-neutral-400">{subtitle}</p>}
       {children}
     </header>
   );
