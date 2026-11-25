@@ -98,7 +98,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                   ['Security Architectures & Cryptography', '60.2% (Merit)'],
                   ['Information Security Management & Governance', '55.6% (Pass)'],
                   ['Cyber-Physical Systems Security', '78.8% (Distinction)'],
-                  ['Research Project', '74.05% (Distinction)'],
+                  ['Research Project (Published in HAISA 2026)', '74.05% (Distinction)'],
                 ]}
                 total={['Final Grade', '71.38% (Distinction)']}
               />
