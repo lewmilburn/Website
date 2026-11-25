@@ -19,9 +19,11 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
 
         <div className="grid-2 gap-4 pt-4">
           <div className="flex flex-col gap-4">
-            <Section icon="fa-id-badge" title="Memberships">
-              <h3 className="txt-2xl font-bold pt-2">UK Cyber Security Council</h3>
-              <p className="italic">Practitioner Cyber Security Professional (PraCSP), 2026 - present</p>
+            <Section icon="fa-certificate" title="Certifications">
+              <h3 className="txt-2xl font-bold pt-2">The Cyber Scheme</h3>
+              <Table
+                heading={['Cyber Scheme Team Member (CSTM)', 'January 2026 - January 2029']}
+              />
             </Section>
 
             <Section icon="fa-briefcase" title="Work">
@@ -72,10 +74,26 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
           </div>
 
           <div className="flex flex-col gap-4">
-            <Section icon="fa-certificate" title="Certifications">
-              <h3 className="txt-2xl font-bold pt-2">Cyber Scheme Team Member (CSTM)</h3>
-              <p className="italic pb-2">The Cyber Scheme</p>
-              <p className="italic pb-8">January 2026 – January 2029</p>
+            <Section icon="fa-id-badge" title="Memberships">
+              <h3 className="txt-2xl font-bold pt-2">UK Cyber Security Council</h3>
+              <Table
+                heading={['Practitioner Cyber Security Professional (PraCSP)', '2026 - present']}
+              />
+
+              <h3 className="txt-2xl font-bold pt-2">British Computer Society</h3>
+              <Table
+                rows={[
+                  ['Professional Member (MBCS)', '2024 - 2025'],
+                  ['Student Member', '2021 - 2024']
+                ]}
+              />
+
+              <h3 className="txt-2xl font-bold pt-2">Chartered Institute of Information Security</h3>
+              <Table
+                rows={[
+                  ['Student Member', '2024 - 2025']
+                ]}
+              />
             </Section>
 
             <Section icon="fa-book-open" title="Publications">
@@ -84,7 +102,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 Study
               </h3>
               <p className="pb-2">20th IFIP International Symposium on Human Aspects of Information Security & Assurance (HAISA 2026, Örebro, Sweden)</p>
-              <p className="italic pb-8">Presented: July 2026, Published: February 2027</p>
+              <p className="italic">Presented: July 2026, Published: February 2027</p>
             </Section>
 
             <Section icon="fa-graduation-cap" title="Education">
