@@ -2,6 +2,7 @@ import { PageHeader } from '../components/PageHeader';
 import { Section } from '../components/Section';
 import { SocialCards } from '../components/Socials';
 import { TopBar } from '../components/TopBar';
+import {Table} from "../components/Table";
 
 export function Research({ onMenuClick }: { onMenuClick: () => void }) {
   return (
@@ -12,10 +13,16 @@ export function Research({ onMenuClick }: { onMenuClick: () => void }) {
         <PageHeader title="Research" />
 
         <div className="grid gap-4 pt-4">
-            <Section icon="fa-book-bookmark" title="2026">
-              <h3 className="txt-2xl font-bold pt-2">Can Large Language Models Support Cyber Security Education in UK Secondary Schools? An Experimental Study.</h3>
-              <p className="pt-2">20th IFIP International Symposium on Human Aspects of Information Security & Assurance (HAISA 2026, Örebro, Sweden)</p>
-              <p className="italic pb-2">Presented: July 2026, Published: February 2027</p>
+            <Section icon="fa-book-bookmark" title="Papers">
+              <Table rows={[
+                ['Can Large Language Models Support Cyber Security Education in UK Secondary Schools? An Experimental Study - 20th IFIP International Symposium on Human Aspects of Information Security & Assurance (HAISA 2026, Örebro, Sweden)','Presented: July 2026, Published: February 2027'],
+                ['Using Large Language Models to Improve Cybersecurity Education at Secondary and Further Education - University of Plymouth','January 2026']
+              ]}/>
+            </Section>
+            <Section icon="fa-gear" title="Tools">
+              <Table rows={[
+                ['AppScanner - Android application offensive security research tool','March 2026']
+              ]}/>
             </Section>
         </div>
 
