@@ -35,7 +35,7 @@ export function Research({ onMenuClick }: { onMenuClick: () => void }) {
                   </td>
                   <td className="subtle">Presented: July 2026 Published: February 2027</td>
                   <td>
-                    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.semanticscholar.org/paper/Can-Large-Language-Models-Support-Cyber-Security-in/ff655110d429c83857346c5e0844de13b0d00abf" target="_blank" rel="noopener noreferrer">
                       Link <Icon name="fa-arrow-up-right-from-square" />
                     </a>
                   </td>

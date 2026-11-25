@@ -152,8 +152,8 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                     <td>Can Large Language Models Support Cyber Security Education in UK Secondary Schools? An Experimental Study</td>
                     <td className="subtle">Presented: July 2026<br />Published: February 2027</td>
                     <td>
-                      <a href="/research" target="_blank" rel="noopener noreferrer">
-                        Link <Icon name="fa-arrow-up-right-from-square" />
+                      <a href="/research">
+                        See more
                       </a>
                     </td>
                   </tr>
