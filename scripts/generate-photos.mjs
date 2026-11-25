@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process'
-import { mkdtemp, readdir, rm } from 'node:fs/promises'
+import { mkdtemp, readdir, rm, stat } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
@@ -16,9 +16,20 @@ for (const album of await readdir(photosDir, { withFileTypes: true })) {
   if (!album.isDirectory()) continue
   const dir = path.join(photosDir, album.name)
 
-  for (const file of await readdir(dir)) {
+  for (let file of await readdir(dir)) {
     const isVideo = VIDEO.test(file)
     if (!(isVideo || IMAGE.test(file)) || file.endsWith('-thumb.jpg')) continue
+
+    if (!isVideo && !/\.webp$/i.test(file)) {
+      const original = path.join(dir, file)
+      const converted = path.join(dir, file.replace(IMAGE, '.webp'))
+      const lossless = /\.png$/i.test(file)
+      await sharp(original).rotate().webp(lossless ? { lossless: true } : { quality: 100 }).toFile(converted)
+      if ((await stat(converted)).size === 0) throw new Error(`${file}: conversion produced an empty file`)
+      await rm(original)
+      console.log(`[photos] ${album.name}/${file} -> webp`)
+      file = path.basename(converted)
+    }
 
     const thumb = path.join(dir, file.replace(isVideo ? VIDEO : IMAGE, '-thumb.jpg'))
     if (existsSync(thumb)) continue
