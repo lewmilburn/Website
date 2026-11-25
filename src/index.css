@@ -53,5 +53,6 @@
   .heading { @apply txt-4xl mb-3 flex items-center gap-3 pb-2 font-bold; }
   .heading i { @apply shrink-0 text-neutral-400; }
   .row { @apply flex justify-between gap-4 border-b border-neutral-800 py-1.5; }
+  .row p { @apply pb-0; }
   .card-content { @apply px-4 py-3; }
 }

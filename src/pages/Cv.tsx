@@ -28,9 +28,9 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
               <h3 className="txt-2xl font-bold pt-2">KPMG</h3>
               <Table
                 rows={[
-                  ['Penetration Testing - Analyst', 'January 2026 – present'],
                   ['Penetration Testing - Junior Analyst', 'July 2025 – January 2026'],
                 ]}
+                heading={['Penetration Testing - Analyst', 'January 2026 – present']}
               />
               <p className="pb-8">
                 I recently joined KPMG as a Penetration Tester. Whilst at KPMG I've passed the CSTM exam, gained the
@@ -93,27 +93,27 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
               <p className="italic pb-2">University of Plymouth, 2024 – 2025</p>
               <Table
                 rows={[
-                  ['Security Operations & Incident Management:', '78.6% (Distinction)'],
-                  ['Ethical Hacking:', '68.6% (Merit)'],
-                  ['Digital Forensics & Malware Analysis:', '78.5% (Distinction)'],
-                  ['Security Architectures & Cryptography:', '60.2% (Merit)'],
-                  ['Information Security Management & Governance:', '55.6% (Pass)'],
-                  ['Cyber-Physical Systems Security:', '78.8% (Distinction)'],
-                  ['Research Project:', '74.05% (Distinction)'],
+                  ['Security Operations & Incident Management', '78.6% (Distinction)'],
+                  ['Ethical Hacking', '68.6% (Merit)'],
+                  ['Digital Forensics & Malware Analysis', '78.5% (Distinction)'],
+                  ['Security Architectures & Cryptography', '60.2% (Merit)'],
+                  ['Information Security Management & Governance', '55.6% (Pass)'],
+                  ['Cyber-Physical Systems Security', '78.8% (Distinction)'],
+                  ['Research Project', '74.05% (Distinction)'],
                 ]}
-                total={['Final Grade:', '71.38% (Distinction)']}
+                total={['Final Grade', '71.38% (Distinction)']}
               />
 
               <h3 className="txt-2xl font-bold pt-2">BSc (Hons) Computer Science</h3>
               <p className="italic pb-2">University of Plymouth, 2021 – 2024</p>
               <Table
                 rows={[
-                  ['First Year:', '66.18% (2:1)'],
-                  ['Second Year:', '62.54% (2:1)'],
-                  ['Third Year:', '78.1% (1st)'],
-                  ['Final Year Project:', '84.61% (1st)'],
+                  ['First Year', '66.18% (2:1)'],
+                  ['Second Year', '62.54% (2:1)'],
+                  ['Third Year', '78.1% (1st)'],
+                  ['Final Year Project', '84.61% (1st)'],
                 ]}
-                total={['Final Grade:', '73.37% (1st)']}
+                total={['Final Grade', '73.37% (1st)']}
                 note={'With award for "Best BSc (Hons) Computer Science Poster in Showcase"'}
               />
             </Section>
