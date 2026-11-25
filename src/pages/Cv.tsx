@@ -83,8 +83,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 Can Large Language Models Support Cyber Security Education in UK Secondary Schools? An Experimental
                 Study
               </h3>
-              <p className="italic">Human Aspects of Information Security and Assurance 2026</p>
-              <p className="italic pb-2">20th IFIP International Symposium on Human Aspects of Information Security & Assurance (HAISA 2026, Örebro, Sweden)</p>
+              <p className="pb-2">20th IFIP International Symposium on Human Aspects of Information Security & Assurance (HAISA 2026, Örebro, Sweden)</p>
               <p className="italic pb-8">Presented: July 2026, Published: February 2027</p>
             </Section>
 
