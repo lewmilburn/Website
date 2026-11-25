@@ -8,4 +8,7 @@ npm run build
 
 // Convert photos and videos to correct format:
 npm run photos
+
+// Generate sitemap:
+npm run sitemap
 ```

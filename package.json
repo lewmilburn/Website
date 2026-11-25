@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "photos": "node scripts/generate-photos.mjs",
-    "build": "tsc --noEmit && vite build",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "build": "node scripts/generate-sitemap.mjs && tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
