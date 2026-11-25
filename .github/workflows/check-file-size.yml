@@ -1,0 +1,32 @@
+name: Check file sizes
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-size:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          lfs: true
+
+      - name: Fail on files over 25MB (Cloudflare Pages limit)
+        run: |
+          limit=$((25 * 1024 * 1024))
+          over=""
+          while IFS= read -r -d '' file; do
+            size=$(stat -c%s "$file")
+            if [ "$size" -gt "$limit" ]; then
+              over="$over$file ($((size / 1024 / 1024))MB)\n"
+            fi
+          done < <(git ls-files -z)
+
+          if [ -n "$over" ]; then
+            echo "The following tracked files exceed Cloudflare Pages' 25MB per-file limit:"
+            echo -e "$over"
+            exit 1
+          fi
+
+          echo "All tracked files are under 25MB."
