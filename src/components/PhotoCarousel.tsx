@@ -1,3 +1,4 @@
+import { Icon } from './Icon';
 import { useEffect, useState } from 'preact/hooks';
 import type { Album, Photo } from '../data/library';
 import { AlbumMeta } from './AlbumMeta';
@@ -67,7 +68,7 @@ export function PhotoCarousel({ albums, count = 5 }: PhotoCarouselProps) {
             onClick={prev}
             className="nav-btn absolute top-1/2 left-4 z-10 -translate-y-1/2 bg-neutral-900 text-white hover:bg-neutral-800"
           >
-            <i className="fa-solid fa-chevron-left" />
+            <Icon name="fa-chevron-left" />
           </button>
           <button
             type="button"
@@ -75,7 +76,7 @@ export function PhotoCarousel({ albums, count = 5 }: PhotoCarouselProps) {
             onClick={next}
             className="nav-btn absolute top-1/2 right-4 z-10 -translate-y-1/2 bg-neutral-900 text-white hover:bg-neutral-800"
           >
-            <i className="fa-solid fa-chevron-right" />
+            <Icon name="fa-chevron-right" />
           </button>
         </>
       )}

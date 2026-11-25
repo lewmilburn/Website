@@ -1,3 +1,4 @@
+import { Icon } from '../components/Icon';
 import { PageHeader } from '../components/PageHeader';
 import { Section } from '../components/Section';
 import { SocialCards } from '../components/Socials';
@@ -21,19 +22,19 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
         <div className="grid-2 gap-4 pt-4">
           <div className="flex flex-col gap-4">
             <Section icon="fa-certificate" title="Certifications">
-              <h3 className="txt-xl font-bold pt-2">The Cyber Scheme</h3>
+              <h3>The Cyber Scheme</h3>
               <table>
                 <thead>
                   <tr>
                     <th>Cyber Scheme Team Member (CSTM)</th>
-                    <th>{'January 2026 - present\n(Expires January 2029)'}</th>
+                    <th>January 2026 - present<br />(Expires January 2029)</th>
                   </tr>
                 </thead>
               </table>
             </Section>
 
             <Section icon="fa-briefcase" title="Work">
-              <h3 className="txt-xl font-bold pt-2">KPMG</h3>
+              <h3>KPMG</h3>
               <table>
                 <thead>
                   <tr>
@@ -53,7 +54,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 Practitioner Cyber Security Professional (PraCSP) professional title, and became a CHECK Team Member.
               </p>
 
-              <h3 className="txt-xl font-bold pt-2">University of Plymouth Student's Union</h3>
+              <h3>University of Plymouth Student's Union</h3>
               <table>
                 <tbody>
                   <tr>
@@ -76,7 +77,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 keyholding, managing day-to-day tasks, and completing daily checks.
               </p>
 
-              <h3 className="txt-xl font-bold pt-2">Primark</h3>
+              <h3>Primark</h3>
               <table>
                 <tbody>
                   <tr>
@@ -90,7 +91,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 fitting rooms, and working on checkouts.
               </p>
 
-              <h3 className="txt-xl font-bold pt-2">ASDA</h3>
+              <h3>ASDA</h3>
               <table>
                 <tbody>
                   <tr>
@@ -109,7 +110,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
 
           <div className="flex flex-col gap-4">
             <Section icon="fa-id-badge" title="Memberships">
-              <h3 className="txt-xl font-bold pt-2">UK Cyber Security Council</h3>
+              <h3>UK Cyber Security Council</h3>
               <table>
                 <thead>
                   <tr>
@@ -119,7 +120,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 </thead>
               </table>
 
-              <h3 className="txt-xl font-bold pt-2">British Computer Society</h3>
+              <h3>British Computer Society</h3>
               <table>
                 <tbody>
                   <tr>
@@ -133,7 +134,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 </tbody>
               </table>
 
-              <h3 className="txt-xl font-bold pt-2">Chartered Institute of Information Security</h3>
+              <h3>Chartered Institute of Information Security</h3>
               <table>
                 <tbody>
                   <tr>
@@ -149,10 +150,10 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 <tbody>
                   <tr>
                     <td>Can Large Language Models Support Cyber Security Education in UK Secondary Schools? An Experimental Study</td>
-                    <td className="subtle">{'Presented: July 2026\nPublished: February 2027'}</td>
+                    <td className="subtle">Presented: July 2026<br />Published: February 2027</td>
                     <td>
                       <a href="/research" target="_blank" rel="noopener noreferrer">
-                        Link <i className="fa-solid fa-arrow-up-right-from-square" />
+                        Link <Icon name="fa-arrow-up-right-from-square" />
                       </a>
                     </td>
                   </tr>
@@ -161,7 +162,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
             </Section>
 
             <Section icon="fa-graduation-cap" title="Education">
-              <h3 className="txt-xl font-bold pt-2">MSc Cyber Security</h3>
+              <h3>MSc Cyber Security</h3>
               <p className="italic pb-2">University of Plymouth, 2024 – 2025</p>
               <table>
                 <tbody>
@@ -202,7 +203,7 @@ export function Cv({ onMenuClick }: { onMenuClick: () => void }) {
                 </tfoot>
               </table>
 
-              <h3 className="txt-xl font-bold pt-2">BSc (Hons) Computer Science</h3>
+              <h3>BSc (Hons) Computer Science</h3>
               <p className="italic pb-2">University of Plymouth, 2021 – 2024</p>
               <table>
                 <tbody>

@@ -1,3 +1,4 @@
+import { Icon } from '../components/Icon';
 import { PageHeader } from '../components/PageHeader';
 import { Section } from '../components/Section';
 import { SocialCards } from '../components/Socials';
@@ -35,7 +36,7 @@ export function Research({ onMenuClick }: { onMenuClick: () => void }) {
                   <td className="subtle">Presented: July 2026 Published: February 2027</td>
                   <td>
                     <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                      Link <i className="fa-solid fa-arrow-up-right-from-square" />
+                      Link <Icon name="fa-arrow-up-right-from-square" />
                     </a>
                   </td>
                 </tr>
@@ -46,22 +47,6 @@ export function Research({ onMenuClick }: { onMenuClick: () => void }) {
                   <td>University of Plymouth</td>
                   <td className="subtle">September 2025</td>
                   <td />
-                </tr>
-              </tbody>
-            </table>
-          </Section>
-
-          <Section icon="fa-gear" title="Tools">
-            <table>
-              <tbody>
-                <tr>
-                  <td>AppScanner - Android application offensive security research tool</td>
-                  <td className="subtle">March 2026</td>
-                  <td>
-                    <a href="https://github.com/lewmilburn/appscanner" target="_blank" rel="noopener noreferrer">
-                      Link <i className="fa-solid fa-arrow-up-right-from-square" />
-                    </a>
-                  </td>
                 </tr>
               </tbody>
             </table>

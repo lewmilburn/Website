@@ -1,3 +1,4 @@
+import { Icon } from './Icon';
 import { useEffect } from 'preact/hooks';
 import type { Photo } from '../data/library';
 
@@ -29,7 +30,7 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4" onClick={onClose}>
       <button type="button" aria-label="Close" onClick={onClose} className={`${btn} top-4 right-4`}>
-        <i className="fa-solid fa-xmark" />
+        <Icon name="fa-xmark" />
       </button>
 
       <button
@@ -41,7 +42,7 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
         }}
         className={`${btn} left-2 sm:left-6`}
       >
-        <i className="fa-solid fa-chevron-left" />
+        <Icon name="fa-chevron-left" />
       </button>
 
       {photo.video ? (
@@ -73,7 +74,7 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
         }}
         className={`${btn} right-2 sm:right-6`}
       >
-        <i className="fa-solid fa-chevron-right" />
+        <Icon name="fa-chevron-right" />
       </button>
     </div>
   );

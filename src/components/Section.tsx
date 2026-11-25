@@ -1,3 +1,4 @@
+import { Icon } from './Icon';
 import type { ComponentChildren } from 'preact';
 
 interface SectionProps {
@@ -10,7 +11,7 @@ export function Section({ icon, title, children }: SectionProps) {
   return (
     <div className="card">
       <h2 className="heading">
-        {icon && <i className={`fa-solid ${icon} fa-fw text-blue-500`} />}
+        {icon && <Icon name={icon} className="mr-2 w-[1.25em] text-blue-500" />}
         {title}
       </h2>
       {children}

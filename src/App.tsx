@@ -1,10 +1,11 @@
 import { useState } from 'preact/hooks';
-import { LocationProvider, Router, Route } from 'preact-iso';
+import { LocationProvider, Router, Route, lazy } from 'preact-iso';
 import { Sidebar } from './components/Sidebar';
 import { Home } from './pages/Home';
-import { Cv } from './pages/Cv';
-import { Gallery } from './pages/Gallery';
-import {Research} from "./pages/Research";
+import {Development} from "./pages/Development";
+const Cv = lazy(() => import('./pages/Cv').then((m) => m.Cv));
+const Gallery = lazy(() => import('./pages/Gallery').then((m) => m.Gallery));
+const Research = lazy(() => import('./pages/Research').then((m) => m.Research));
 
 export function App() {
   const [open, setOpen] = useState(false);
@@ -18,6 +19,7 @@ export function App() {
       <Router>
         <Route path="/" component={Home} onMenuClick={toggle} />
         <Route path="/cv" component={Cv} onMenuClick={toggle} />
+        <Route path="/development" component={Development} onMenuClick={toggle} />
         <Route path="/research" component={Research} onMenuClick={toggle} />
         <Route path="/gallery/:album?" component={Gallery} onMenuClick={toggle} />
       </Router>

@@ -1,3 +1,4 @@
+import { Icon } from '../components/Icon';
 import { useEffect, useState } from 'preact/hooks';
 import { useLocation, useRoute } from 'preact-iso';
 import { albums } from '../data/library';
@@ -23,7 +24,7 @@ export function Gallery({ onMenuClick }: { onMenuClick: () => void }) {
   const back = (
     <div className="flex justify-center pb-8">
       <Button onClick={() => route('/gallery')}>
-        <i className="fa-solid fa-arrow-left" /> Back to gallery
+        <Icon name="fa-arrow-left" /> Back to gallery
       </Button>
     </div>
   );

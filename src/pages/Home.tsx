@@ -1,3 +1,4 @@
+import { Icon } from '../components/Icon';
 import lewis from '../assets/lewis-grad.webp';
 import { SocialCards } from '../components/Socials';
 
@@ -20,8 +21,8 @@ export function Home({ onMenuClick }: { onMenuClick: () => void }) {
       <section className="relative h-screen overflow-hidden bg-blue-500">
         <div className="absolute top-0 right-0 left-0 z-30 flex py-1 pl-std pr-std">
           <div className="flex-grow" />
-          <button className="nav-btn bg-neutral-900 text-white hover:bg-neutral-800" onClick={onMenuClick}>
-            <i className="fa-solid fa-bars" />
+          <button className="nav-btn bg-neutral-900 text-white hover:bg-neutral-800" onClick={onMenuClick} aria-label="Open menu">
+            <Icon name="fa-bars" />
           </button>
         </div>
 
@@ -31,7 +32,7 @@ export function Home({ onMenuClick }: { onMenuClick: () => void }) {
           ))}
 
           <div className="col-start-1 row-start-2 col-span-3 row-span-4 relative overflow-hidden">
-            <img src={lewis} className="absolute inset-0 h-full w-full object-cover object-top" alt="Lewis" />
+            <img src={lewis} className="absolute inset-0 h-full w-full object-cover object-top" alt="Lewis" fetchpriority="high" decoding="async" />
           </div>
 
           <div className="z-10 col-start-4 row-start-3 col-span-5 row-span-2 flex min-w-0 flex-col justify-center px-4 md:px-12">
@@ -42,7 +43,7 @@ export function Home({ onMenuClick }: { onMenuClick: () => void }) {
       </section>
 
       <div className="p-std">
-        <h2 className="txt-3xl pb-2 font-bold">About me.</h2>
+        <h2>About me.</h2>
         <p className="txt-2xl pb-8">
           I'm Lewis, a Pentester from the UK. I'm currently working at KPMG after completing my MSc in Cyber Security
           at the University of Plymouth.
@@ -54,12 +55,15 @@ export function Home({ onMenuClick }: { onMenuClick: () => void }) {
           <a href="/research" className="button no-underline">
             <p className="card-content text-center">Research</p>
           </a>
+          <a href="/development" className="button no-underline">
+            <p className="card-content text-center">Development</p>
+          </a>
           <a href="/gallery" className="button no-underline">
             <p className="card-content text-center">Gallery</p>
           </a>
         </div>
 
-        <h2 className="txt-3xl pb-2 font-bold">Follow me.</h2>
+        <h2>Follow me.</h2>
         <SocialCards className="grid-4 txt-2xl gap-4" />
       </div>
     </main>

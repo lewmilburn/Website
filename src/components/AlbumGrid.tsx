@@ -18,7 +18,7 @@ export function AlbumGrid({ albums }: { albums: Album[] }) {
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-            <h2 className="txt-3xl font-bold">{album.title}</h2>
+            <h2>{album.title}</h2>
             <AlbumMeta album={album} className="text-sm text-neutral-200" />
           </div>
         </a>

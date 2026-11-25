@@ -1,3 +1,4 @@
+import { Icon } from './Icon';
 export function TopBar({ onMenuClick }: { onMenuClick: () => void }) {
   return (
     <nav className="nav txt-2xl">
@@ -5,7 +6,7 @@ export function TopBar({ onMenuClick }: { onMenuClick: () => void }) {
         Lewis Milburn
       </a>
       <button className="nav-btn text-white" onClick={onMenuClick} aria-label="Open menu">
-        <i className="fa-solid fa-bars" />
+        <Icon name="fa-bars" />
       </button>
     </nav>
   );

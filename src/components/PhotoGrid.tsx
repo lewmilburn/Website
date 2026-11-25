@@ -1,3 +1,4 @@
+import { Icon } from './Icon';
 import type { Photo } from '../data/library';
 
 export function PhotoGrid({ photos, onSelect }: { photos: Photo[]; onSelect: (index: number) => void }) {
@@ -21,7 +22,7 @@ export function PhotoGrid({ photos, onSelect }: { photos: Photo[]; onSelect: (in
           )}
           {photo.video && (
             <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <i className="fa-solid fa-circle-play text-5xl text-white drop-shadow-lg" />
+              <Icon name="fa-circle-play" className="text-5xl text-white drop-shadow-lg" />
             </span>
           )}
         </button>

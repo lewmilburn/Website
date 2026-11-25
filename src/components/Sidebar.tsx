@@ -1,3 +1,4 @@
+import { Icon } from './Icon';
 import { socials } from './Socials';
 
 const order = ['LinkedIn', 'GitHub', 'ORCID', 'Instagram'];
@@ -13,25 +14,29 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
         <a href="/" className="txt-2xl font-heading font-bold no-underline text-white" onClick={onClose}>
           Lewis Milburn
         </a>
-        <button className="nav-btn text-white" onClick={onClose}>
-          <i className="fa-solid fa-xmark" />
+        <button className="nav-btn text-white" onClick={onClose} aria-label="Close menu">
+          <Icon name="fa-xmark" />
         </button>
       </div>
       <nav className="flex flex-1 flex-col pt-2">
         <a href="/" className="sidebar-btn no-underline" onClick={onClose}>
-          <i className="fa-solid fa-house w-5" />
+          <Icon name="fa-house" className="w-5" />
           <span>Home</span>
         </a>
         <a href="/cv" className="sidebar-btn no-underline" onClick={onClose}>
-          <i className="fa-solid fa-file-lines w-5" />
+          <Icon name="fa-file-lines" className="w-5" />
           <span>CV</span>
         </a>
+        <a href="/development" className="sidebar-btn no-underline" onClick={onClose}>
+          <Icon name="fa-gear" className="w-5" />
+          <span>Development</span>
+        </a>
         <a href="/research" className="sidebar-btn no-underline" onClick={onClose}>
-          <i className="fa-solid fa-book-bookmark w-5" />
+          <Icon name="fa-book-bookmark" className="w-5" />
           <span>Research</span>
         </a>
         <a href="/gallery" className="sidebar-btn no-underline" onClick={onClose}>
-          <i className="fa-solid fa-images w-5" />
+          <Icon name="fa-images" className="w-5" />
           <span>Gallery</span>
         </a>
       </nav>
@@ -39,8 +44,8 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
         {order.map((n) => {
           const s = socials.find((x) => x.name === n)!;
           return (
-            <a key={n} href={s.href} className="sidebar-social" target="_blank" rel="noreferrer">
-              <i className={`fa-brands ${s.icon}`} />
+            <a key={n} href={s.href} className="sidebar-social" aria-label={s.name} target="_blank" rel="noreferrer">
+              <Icon name={s.icon} />
             </a>
           );
         })}
