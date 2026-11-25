@@ -18,6 +18,6 @@ function formatDate(date: string) {
 
 export function AlbumMeta({ album, className }: { album: Pick<Album, 'date' | 'location'>; className: string }) {
   const date = album.date && formatDate(album.date);
-  const text = date && album.location ? `${date} in ${album.location}` : date || album.location;
-  return text ? <p className={className}>{text}</p> : null;
+  const text = album.location ? `${album.location}` : '';
+  return text ? <><p className={className}>{text}</p><p className={className}>{date}</p></> : null;
 }
