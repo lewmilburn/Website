@@ -18,7 +18,11 @@ for (const album of await readdir(photosDir, { withFileTypes: true })) {
 
   for (let file of await readdir(dir)) {
     const isVideo = VIDEO.test(file)
-    if (!(isVideo || IMAGE.test(file)) || file.endsWith('-thumb.jpg')) continue
+    if (file.endsWith('-thumb.jpg')) {
+      await rm(path.join(dir, file))
+      continue
+    }
+    if (!(isVideo || IMAGE.test(file)) || file.endsWith('-thumb.webp')) continue
 
     if (!isVideo && !/\.webp$/i.test(file)) {
       const original = path.join(dir, file)
@@ -31,7 +35,7 @@ for (const album of await readdir(photosDir, { withFileTypes: true })) {
       file = path.basename(converted)
     }
 
-    const thumb = path.join(dir, file.replace(isVideo ? VIDEO : IMAGE, '-thumb.jpg'))
+    const thumb = path.join(dir, file.replace(isVideo ? VIDEO : IMAGE, '-thumb.webp'))
     if (existsSync(thumb)) continue
 
     let source = path.join(dir, file)
@@ -45,7 +49,7 @@ for (const album of await readdir(photosDir, { withFileTypes: true })) {
       }
     }
 
-    await sharp(source).resize({ width: 600, withoutEnlargement: true }).jpeg({ quality: 82 }).toFile(thumb)
+    await sharp(source).resize({ width: 600, withoutEnlargement: true }).webp({ quality: 82 }).toFile(thumb)
     console.log(`[photos] ${album.name}/${file} -> thumb`)
   }
 }
